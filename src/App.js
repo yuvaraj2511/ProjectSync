@@ -1,6 +1,6 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar'; // Import the NavBar component
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
@@ -14,6 +14,9 @@ import Dashboard_Ins from './Dashboard_ins';
 function App() {
   return (
     <Router>
+      {/* Include the NavBar component */}
+      <NavBar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />

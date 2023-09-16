@@ -138,10 +138,10 @@ const [bookmarkedResearchPapers, setBookmarkedResearchPapers] = useState([
   const [selectedResearchPaper, setSelectedResearchPaper] = useState(null);
 
   const [user, setUser] = useState({
-    name: 'John Doe', // Replace with the actual user data
+    name: 'John Doe', 
     username: 'johndoe',
     email: 'johndoe@example.com',
-    // Add other user details as needed
+    
   });
   // State variables for bookmarked projects and research papers
   const generatePDF = () => {
@@ -664,7 +664,7 @@ const saveNewResearchPaper = (e) => {
         </div>
       )}
 
-      {/* Rest of your Dashboard components */}
+      
     </div>
   );
 }
