@@ -1,0 +1,93 @@
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff; /* Change the background color to black */
+}
+
+/* Login Box */
+.login-box {
+  background-color: #fff;
+  border-radius: 20px; /* Increase the border-radius for a rounded box */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px; /* Increase padding for more space */
+  width: 400px; /* Increase the box width */
+  text-align: center;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #000; /* Change the text color to black */
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px; /* Increase margin-bottom for more space */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555; /* Change the label text color */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px; /* Increase padding for larger input units */
+  border: 2px solid #000; /* Change the input border color to black */
+  border-radius: 10px; /* Increase border-radius for rounded inputs */
+  font-size: 16px; /* Increase font-size for better readability */
+}
+
+/* Password Toggle Button */
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000; /* Change the eye icon color to black */
+  font-size: 20px; /* Increase font-size for better visibility */
+}
+
+/* Login Button */
+.login-button {
+  background-color: #3498db; /* Change the button background color to black */
+  color: #fff;
+  border: none;
+  border-radius: 10px; /* Increase border-radius for a rounded button */
+  padding: 12px 20px; /* Increase padding for a larger button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-size: 18px; /* Increase font-size for better visibility */
+}
+
+.login-button:hover {
+  background-color: #3498db; /* Change the button color on hover to a darker shade */
+}
+
+/* Login Links */
+.login-links {
+  text-align: center;
+  margin-top: 20px; /* Increase margin-top for more space */
+  color: #555; /* Change the link text color */
+}
+
+.login-links a {
+  text-decoration: none;
+  margin: 0 10px; /* Increase margin for better spacing */
+  font-weight: bold;
+  color: #000; /* Change the link color to black */
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}

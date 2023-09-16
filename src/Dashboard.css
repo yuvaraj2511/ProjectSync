@@ -1,0 +1,414 @@
+/* CSS for your Dashboard component */
+
+/* Dashboard container */
+.dashboard-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Section headings */
+.dashboard-section h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* List of projects */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Project item */
+.project-item {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Edit and Delete buttons */
+.edit-button,
+.delete-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #0056b3;
+}
+
+/* List of research papers */
+.research-paper-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Research paper item */
+.research-paper-item {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.research-paper-item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Popups */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Add Project and Add Research Paper buttons */
+.add-project-button,
+.add-research-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-project-button:hover,
+.add-research-button:hover {
+  background-color: #0056b3;
+}
+/* Styling for the Add New Project button */
+.add-project-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color, you can change it */
+  color: #fff; /* White text */
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-project-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the Add New Research Paper button */
+.add-research-paper-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color, you can change it */
+  color: #fff; /* White text */
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-research-paper-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the Add New Project form */
+.add-project-form {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Styling for the Add New Research Paper form */
+.add-research-paper-form {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Styling for common form elements */
+.form-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form-section {
+  margin: 10px 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-submit-button {
+  background-color: #28a745; /* Green color for save button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-submit-button:hover {
+  background-color: #1e7e34; /* Darker green on hover */
+}
+/* Styling for the "Save" button in the Add New Project form */
+.add-project-form .save-button {
+  background-color: #007bff; /* Change the background color as desired */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+
+  /* Additional styles on hover */
+  &:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+  }
+}
+
+/* Styling for the "Save" button in the Add New Research Paper form */
+.add-research-paper-form .save-button {
+  background-color: #28a745; /* Change the background color as desired */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+
+  /* Additional styles on hover */
+  &:hover {
+    background-color: #1e7e34; /* Change the background color on hover */
+  }
+}
+/* CSS for the "Add Event" button */
+.add-event-button {
+  background-color: #007bff; /* Blue color for the button */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-event-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* CSS for the event form popup */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the popup is on top */
+}
+
+.popup-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.add-event-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.add-event-form input[type="text"],
+.add-event-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-event-form .save-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-event-form .save-button:hover {
+  background-color: #0056b3;
+}
+/* CSS for Event List */
+.event-list {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.event-item1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  max-width: 400px;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.event-item1 h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.event-item1 p {
+  margin: 5px 0;
+}
+
+.event-item1 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* CSS for Event Edit Form */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popup-box input[type="date"],
+.popup-box input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.popup-box button.save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.popup-box button.save-button:hover {
+  background-color: #0056b3;
+}

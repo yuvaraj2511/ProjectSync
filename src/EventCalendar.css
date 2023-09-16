@@ -1,0 +1,137 @@
+/* Calendar Container */
+.event-calendar {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 800px;
+    margin: 0 auto; /* Horizontally center the container */
+    position: relative; /* Required for absolute positioning */
+  }
+  
+  /* Center vertically within the container */
+  .event-calendar:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjust for spacing */
+  }
+  
+  /* Calendar Header */
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Previous Month Button */
+  .prev-month-button {
+    font-size: 20px;
+    cursor: pointer;
+    color: #007BFF;
+  }
+  
+  /* Next Month Button */
+  .next-month-button {
+    font-size: 20px;
+    cursor: pointer;
+    color: #007BFF;
+  }
+  
+  /* Calendar Grid */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+  }
+  
+  /* Calendar Day */
+  .calendar-day {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calendar-day.past {
+    background-color: #f2f2f2;
+  }
+  
+  /* Event Popup */
+  .event-popup {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-align: left;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  /* Event List */
+  .event-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Event Item */
+  .event-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Event Title */
+  .event-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #007BFF;
+  }
+  
+  /* Event Detail */
+  .event-detail {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Event Link */
+  .event-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .event-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+
+  .app-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh; /* Ensure it takes up the full viewport height */
+  }
