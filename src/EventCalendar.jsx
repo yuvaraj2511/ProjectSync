@@ -82,7 +82,11 @@ function EventCalendar() {
           {daysInMonth.map((date) => (
             <div
               key={date.toString()}
-              className={`calendar-day ${date <= today ? 'past' : ''}`}
+              className={`calendar-day ${date <= today ? 'past' : ''} ${
+                events.some((event) => isSameDay(new Date(event.date), date))
+                  ? 'has-events'
+                  : ''
+              }`}
               onClick={() => handleDateClick(date)}
             >
               {format(date, 'd')}

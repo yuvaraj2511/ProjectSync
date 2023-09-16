@@ -7,17 +7,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 800px;
-    margin: 0 auto; /* Horizontally center the container */
-    position: relative; /* Required for absolute positioning */
+    margin: 0 auto; 
+    position: relative; 
   }
   
-  /* Center vertically within the container */
+  
   .event-calendar:before {
     content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -0.25em; /* Adjust for spacing */
+    margin-right: -0.25em; 
   }
   
   /* Calendar Header */
@@ -131,7 +131,14 @@
 
   .app-container {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    min-height: 100vh; /* Ensure it takes up the full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
   }
+
+  /* Calendar Day with Events */
+.calendar-day.has-events {
+  background-color: #007BFF; 
+  color: #fff; 
+  font-weight: bold; 
+}

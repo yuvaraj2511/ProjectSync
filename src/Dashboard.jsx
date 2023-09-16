@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
+import jsPDF from 'jspdf';
+
 
 // Define a new component for the project edit form
 function ProjectEditForm({ project, onSave, onClose }) {
@@ -135,7 +137,37 @@ const [bookmarkedResearchPapers, setBookmarkedResearchPapers] = useState([
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedResearchPaper, setSelectedResearchPaper] = useState(null);
 
+  const [user, setUser] = useState({
+    name: 'John Doe', // Replace with the actual user data
+    username: 'johndoe',
+    email: 'johndoe@example.com',
+    // Add other user details as needed
+  });
   // State variables for bookmarked projects and research papers
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+    doc.text(`ProjectSync - ${user.name}`, 10, 20);
+  
+    // Add user details
+    doc.setFontSize(12);
+    doc.text(`Username: ${user.username}`, 10, 30);
+    doc.text(`Email: ${user.email}`, 10, 40);
+    // Add other user details as needed
+  
+    // Add project titles and technical stack
+    doc.setFontSize(14);
+    let yOffset = 60;
+    projects.forEach((project) => {
+      doc.text(`Project: ${project.title}`, 10, yOffset);
+      doc.setFontSize(10);
+      doc.text(`Technical Stack: ${project.requirements}`, 10, yOffset + 10);
+      doc.setFontSize(14);
+      yOffset += 30; // Adjust the spacing as needed
+    });
+  
+    doc.save(`projectsync_${user.name}.pdf`);
+  };
   
 
   // Function to handle project click
@@ -321,6 +353,9 @@ const saveNewResearchPaper = (e) => {
         </button>
         <button className="add-research-paper-button" onClick={openAddResearchPaperForm}>
           Add Research Paper
+        </button>
+        <button className="download-button" onClick={generatePDF}>
+          Download PDF
         </button>
       </div>
       {showAddProjectForm && (
